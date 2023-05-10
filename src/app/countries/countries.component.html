@@ -13,7 +13,7 @@
 <!-- <div><select name="" id=""><option value="" *ngFor="let c of MyCountries">{{c.name}}</option></select></div>
 <ul><li *ngFor="let c of MyCountries">{{c.name}}</li></ul> -->
 
-<div style="display:flex;flex-wrap: wrap;">
+<div style="display:flex;flex-wrap: wrap;margin-left:35px;">
   <country *ngFor="let c of MyCountries" [name]="c.name" [flag]="c.flag" [population]="c.population" [capital]="c.capital" ></country>
 </div>
 
