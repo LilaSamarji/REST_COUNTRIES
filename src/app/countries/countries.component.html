@@ -14,7 +14,7 @@
 <ul><li *ngFor="let c of MyCountries">{{c.name}}</li></ul> -->
 
 <div style="display:flex;flex-wrap: wrap;margin-left:35px;">
-  <country *ngFor="let c of MyCountries" [name]="c.name" [flag]="c.flag" [population]="c.population" [capital]="c.capital" ></country>
+  <country *ngFor="let c of MyCountries" [name]="c.name" [flag]="c.flag" [population]="c.population" [capital]="c.capital" [languages]="c.lang" [borders]="c.borders"></country>
 </div>
 
 

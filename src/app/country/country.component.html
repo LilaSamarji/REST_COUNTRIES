@@ -1,18 +1,16 @@
+<div *ngIf="name.toLowerCase()==countryPassed.toLocaleLowerCase() || countryPassed=='' " class="card"
+	style="width:20rem; height:30rem;  margin-right: 10px; margin-bottom:12px; border:2px solid brown; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+	<img [src]="flag" class="card-img-top" style="width:316.5px;height:200px;">
+	<div class="card-body" style="background-color:#FFDAB9; height:20rem;">
+		<h3 class="card-title" style="color:#800000	 ;font-size:25px; font-weight:bold">{{name}}</h3>
+		<p><span style="font-weight:bold;color:	#B22222;">Capital</span> {{capital}} </p>
 
-
-<div class="card" style="width:18rem; height:25rem;  margin-right: 10px; margin-bottom:10px; border:2px solid brown; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
-  <img [src]="flag" class="card-img-top" style="width:285px;height:200px;">
-  <div class="card-body" style="background-color:#FFDAB9; height:20rem;">
-    <h3 class="card-title" style="color:#800000	 ;font-size:25px; font-weight:bold">{{name}}</h3>
-    <p><span style="font-weight:bold;color:	#B22222;">Capital</span>  {{capital}} </p>
-    <!-- <p><span style="font-weight:bold;color:	#B22222;">Languages</span>  {{languages}}</p> -->
-    <a href="#" class="btn btn-primary" (click)="open(content)">Population</a>
-  </div>
-  </div>
-
-
-
- 
+		<p><span style="font-weight:bold;color:	#B22222;">Languages</span> {{languages}}</p>
+		<p><span style="font-weight:bold;color:	#B22222;">Borders</span> {{borders}}</p>
+		<a href="#" class="btn btn-primary" (click)="open(content)" [routerLink]="['/home']">Population</a>
+	</div>
+</div>
+<!--BOOTSTRAP MODAL-->
 <ng-template #content let-c="close" let-d="dismiss">
 	<div class="modal-header">
 		<h4 class="modal-title" id="modal-basic-title">Population of {{name}}</h4>
@@ -25,5 +23,3 @@
 		<button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button>
 	</div>
 </ng-template>
-
-
